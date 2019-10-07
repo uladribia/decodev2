@@ -33,7 +33,7 @@ const colors = {
 
 const theme = {
   colors,
-  fontFamily: 'Montserrat',
+  fontFamily: 'Arial',
   fontSizeText: 14,
   fontSizeTitle: 18,
   fontSizeIcon: 22,
