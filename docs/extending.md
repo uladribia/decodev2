@@ -202,12 +202,17 @@ We take as base the [bcn-now functions](../src/redux/modules/applications/bcnnow
 
 First we declare the files in the [index](../src/redux/modules/applications/index.js) file (not shown).
 
-Then, we generate the [coolwebsite](../src/redux/modules/applications/coolwebsite.js) file.
-
+Then, we generate the [coolwebsite](../src/redux/modules/applications/coolwebsite.js) file from a straight copy of BCNNow, without changing anything. (We could reuse the same file, but just in case some changes are added, we keep it like that).
 
 ##### Screen declaration
 
-For the screens, 
+For the screens, we head to the [applicaiton screens folder](../src/screns/applications) and create a new folder copying from the base BCNNow folder. Where the following files must be located:
+
+- `index.js`: Just to declare the other files
+- `coolwebsite.Styles.js`: To declare styles (we leave them unchanged)
+- `coolwebsite.Container.js`:
+- `coolwebsite.Component.js`: 
+
 
 ##### QR & handle trigger declaration
 
@@ -215,6 +220,10 @@ For the screens,
 
 ##### Writting test functions
 
+
+#### Conclusions
+
+For future work (we leave it as a ticket), to avoid redundancy the BCNNow entire codebase could be repackaged into a generic log-in base.
 
 
 
