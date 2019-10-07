@@ -18,10 +18,13 @@
  *
  * email: info@dribia.com
  */
+import moment from 'moment';
+import { find } from 'ramda';
 
-import age from './age';
-import ageRange from './ageRange';
-import coolGender from './coolGender';
+const matchRange = num => ([start, end = Infinity]) => num >= start && num < end;
 
-
-export default { age, ageRange, coolGender };
+export default (birthDate, config = {}) => {
+  const { ranges = [] } = config;
+  const age = moment().diff(moment(birthDate), 'years');
+  return find(matchRange(age))(ranges);
+};

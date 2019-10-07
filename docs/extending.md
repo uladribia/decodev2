@@ -158,8 +158,24 @@ We also need to further declare the messages that the app will show:
 ##### Converter declaration
 
 Now let's declare the function that converts the attribute "gender" into "coolGender".
+We head to the [converters index](../src/redux/converters/index.js) and declare a new file:
+
+```json
+import age from './age';
+import ageRange from './ageRange';
+import coolGender from './coolGender';
 
 
+export default { age, ageRange, coolGender };
+
+```
+
+And write a simple function that takes care of the transform in the [coolGender file](../src/redux/converters/coolGender.js)
+
+```json
+
+
+```
 
 ##### API declaration
 
