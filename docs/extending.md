@@ -615,54 +615,6 @@ Need to declare the handle as well (not done as of yet).
 
 To clean up, do not forget to write test calls to all the declared functions and features. To do so, head to `/__tests__/` and finalize the work.
 
-File applications.spec.js
-
-(only added lines present)
-```javascript
-import { initialState as iotInitialState } from 'redux/modules/applications/iot';
-
-{
-  id: 'iot',
-  name: 'iotName',
-  title: 'iotTitle',
-  image: 'icon-iot',
-  link: 'http://start.decode.smartcitizen.me',
-  description: 'iotDesc',
-  usageCount: 0,
-  numCertificates: 0,
-},
-
-```
-
-File attributes.specs.js
-
-````javascript
-
-import getBlurredAddress from 'redux/converters/blurredAddress';
-
-
-...
-  test('Calculate blurredAddress', () => {
-    expect(getBlurredAddress().toEqual('Empty Adress');
-  });
-
-
-````
-
-File root.spec.js
-
-````javascript
-
-import { initialState as iotInitialState } from 'redux/modules/applications/iot';
-
-
-const initialApplications = {
-  dddc: dddcInitialState,
-  bcnnow: bcnnowInitialState,
-  iot: iotInitialState,
-};
-
-````
 
 
 ## Conclusion
@@ -671,3 +623,12 @@ Congratulations! You made it here, so your new service is up and running. To not
 
 
 
+# TODO
+
+## Core
+
+- QR handling should decouple actions from services
+- Tests are a bit hardcoded
+- Login should be made generic, the same as petition.
+
+## Extra
