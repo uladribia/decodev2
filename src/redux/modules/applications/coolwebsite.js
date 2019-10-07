@@ -92,7 +92,7 @@ export const getError = createSelector(
 export default (state = initialState, action) => {
   switch (action.type) {
     case APPLICATION_ACTIONS.INIT_APPLICATION: {
-      if (action.id !== 'bcnnow') return state;
+      if (action.id !== 'coolwebsite') return state;
       return {
         ...state,
         loading: false,

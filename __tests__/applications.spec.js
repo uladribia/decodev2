@@ -30,12 +30,14 @@ import reducer, {
 } from 'redux/modules/applications';
 import { initialState as dddcInitialState } from 'redux/modules/applications/dddc';
 import { initialState as bcnnowInitialState } from 'redux/modules/applications/bcnnow';
+import { initialState as coolwebsiteInitialState } from 'redux/modules/applications/coolwebsite';
 import { getImage } from 'api/atlas-client';
 import { encrypt } from 'lib/utils';
 
 const initialState = {
   dddc: dddcInitialState,
   bcnnow: bcnnowInitialState,
+  coolwebsite: coolwebsiteInitialState,
 };
 
 describe('Application tests', () => {
@@ -62,6 +64,7 @@ describe('Application tests', () => {
           ],
         },
         bcnnow: bcnnowInitialState,
+		coolwebsite: coolwebsiteInitialState,
       },
     });
     expect(
@@ -89,6 +92,15 @@ describe('Application tests', () => {
         ],
         usageCount: 0,
       },
+      {
+        averageUse: [0, 'year'],
+        firstUse: undefined,
+        lastUse: undefined,
+        sharedData: [
+          { id: 'coolGender', shared: false },
+        ],
+        usageCount: 0,
+      },
     ]);
   });
 
@@ -105,6 +117,7 @@ describe('Application tests', () => {
           },
         },
         bcnnow: bcnnowInitialState,
+		coolwebsite: coolwebsiteInitialState,
       },
     });
     expect(
@@ -132,6 +145,15 @@ describe('Application tests', () => {
         ],
         numCertificates: 0,
       },
+      {
+        averageUse: [0, 'year'],
+        firstUse: undefined,
+        lastUse: undefined,
+        sharedData: [
+          { id: 'coolGender', shared: false },
+        ],
+        numCertificates: 0,
+      },
     ]);
   });
 
@@ -150,6 +172,10 @@ describe('Application tests', () => {
         id: 'bcnnow',
         name: 'bcnnow.name',
       },
+      {
+        id: 'coolwebsite',
+        name: 'coolwebsite.name',
+      },
     ]);
   });
 
@@ -166,6 +192,10 @@ describe('Application tests', () => {
               date: +moment('2019-04-21'),
               sharedData: ['gender', 'birthDate'],
             },
+            {
+              date: +moment('2019-04-21'),
+              sharedData: ['coolGender'],
+            },
           ],
           numCertificates: 2,
         },
@@ -181,6 +211,10 @@ describe('Application tests', () => {
       {
         id: 'bcnnow',
         name: 'bcnnow.name',
+      },
+      {
+        id: 'coolwebsite',
+        name: 'coolwebsite.name',
       },
     ]);
   });

@@ -225,7 +225,9 @@ Because we are using a standard log-in trigger, there is no need to change almos
 
 ##### Writting test functions
 
+We need to adapt the [__tests__](../__tests__/) folder with the new code done.
 
+Changes are easy to follow (see branch changes), 
 
 #### Conclusions
 
