@@ -6,6 +6,12 @@
       "description": "genderDesc",
       "values": ["female", "male", "other"]
     },
+    "coolGender": {
+      "name": "coolGender",
+      "type": "enum",
+      "derivedFrom": "gender",
+	  "values": ["other","declared"]
+    },
     "birthDate": {
       "name": "birthDate",
       "type": "date",

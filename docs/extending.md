@@ -96,11 +96,28 @@ We are going to implement most of the custom code by hand, however, we are re-us
 
 ##### Styles declaration
 
-In this case we do not want to customize the theme, so we do not alter the [themes file](../src/lib/theme.js).
+In this case we have decided to change the font, so we alter the [themes file](../src/lib/theme.js). We could as well alter the colours.
 
 ##### ATLAS declaration
 
--> Do and add an extra attribute (modified gender)
+We head to the [ATLAS file](../src/api/atlas/atlas.json) and declare:
+ - A new derived attribute, that will consists on either "declared" if user declared female/male or "other".
+ - Our new service, called "coolWebSite"
+
+Declaring the attribute is easy:
+
+```json 
+    "coolGender": {
+      "name": "coolGender",
+      "type": "enum",
+      "derivedFrom": "gender",
+	  "values": ["other","declared"]
+    }
+```
+
+And os is declaring the new service:
+
+
 
 ##### Converter declaration
 
