@@ -53,6 +53,7 @@ import { listApplications, getApplication } from 'api/atlas-client';
 import { upperFirst } from 'lib/utils';
 import dddc from './dddc';
 import bcnnow from './bcnnow';
+import coolwebsite from './coolwebsite';
 import { APPLICATION_ACTIONS } from './actions';
 
 const defaultStats = {
@@ -191,4 +192,5 @@ export const getProgress = applicationId => createSelector(
 export default combineReducers({
   dddc,
   bcnnow,
+  coolwebsite,
 });

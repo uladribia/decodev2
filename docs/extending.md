@@ -198,6 +198,13 @@ The API for the credential management is already built-in in the app, and can be
 
 We don't need to worry too much about business logic, as the log-in is already implemented in the app. Other cases might require more work (see [below](#harder-case:the-iot-service)).
 
+We take as base the [bcn-now functions](../src/redux/modules/applications/bcnnow.js) in the applications folder and modify it accordignly.
+
+First we declare the files in the [index](../src/redux/modules/applications/index.js) file (not shown).
+
+Then, we generate the [coolwebsite](../src/redux/modules/applications/coolwebsite.js) file.
+
+
 ##### Screen declaration
 
 For the screens, 
