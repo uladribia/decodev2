@@ -87,6 +87,22 @@
       "sharedAttributes": ["gender", "ageRange", "district"],
       "activationMsg": "bcnnow.activation",
       "actionMsg": "bcnnow.login"
+    },
+    "coolwebsite": {
+      "urlScheme": {
+        "action": "login",
+        "serviceId": "sessionId",
+        "params": ["callback"]
+      },
+      "id": "coolwebsite",
+      "name": "coolwebsite.name",
+      "title": "coolwebsite.title",
+      "image": "city",
+      "link": "http://coolwebsite.com",
+      "description": "coolwebsite.desc",
+      "sharedAttributes": ["coolGender"],
+      "activationMsg": "coolwebsite.activation",
+      "actionMsg": "coolwebsite.login"
     }
   },
   "translations": {

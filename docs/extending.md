@@ -102,7 +102,7 @@ In this case we have decided to change the font, so we alter the [themes file](.
 
 We head to the [ATLAS file](../src/api/atlas/atlas.json) and declare:
  - A new derived attribute, that will consists on either "declared" if user declared female/male or "other".
- - Our new service, called "coolWebSite"
+ - Our new service, called "coolwebSite"
 
 Declaring the attribute is easy:
 
@@ -115,13 +115,33 @@ Declaring the attribute is easy:
     }
 ```
 
-And os is declaring the new service:
+And so is declaring the new service:
 
+```json
+    "coolwebsite": {
+      "urlScheme": {
+        "action": "login",
+        "serviceId": "sessionId",
+        "params": ["callback"]
+      },
+      "id": "coolwebsite",
+      "name": "coolwebsite.name",
+      "title": "coolwebsite.title",
+      "image": "city",
+      "link": "http://coolwebsite.com",
+      "description": "coolwebsite.desc",
+      "sharedAttributes": ["coolGender"],
+      "activationMsg": "coolwebsite.activation",
+      "actionMsg": "coolwebsite.login"
+    }
+```
 
 
 ##### Converter declaration
 
--> Implement function
+Now let's declare the function that converts the attribute "gender" into "coolGender".
+
+
 
 ##### API declaration
 
