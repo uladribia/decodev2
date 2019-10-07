@@ -109,6 +109,7 @@
     "attributes": {
       "ca": {
         "gender": "Gènere",
+		"coolGender": "Cool gender",
         "genderDesc": "Tria el teu gènere",
         "female": "Dona",
         "male": "Home",
@@ -125,6 +126,7 @@
       },
       "es": {
         "gender": "Género",
+		"coolGender": "Cool gender",
         "genderDesc": "Escoge tu género",
         "female": "Mujer",
         "male": "Hombre",
@@ -141,6 +143,7 @@
       },
       "en": {
         "gender": "Gender",
+		"coolGender": "Cool gender",
         "genderDesc": "Pick your gender",
         "female": "Female",
         "male": "Male",
@@ -179,6 +182,17 @@
           "success": "Connectat correctament",
           "timeout": "Temps d'espera excedit. Si us plau reintenteu",
           "refresh": "Torneu al vostre navegador i si cal refresqueu la pàgina"
+        },
+        "coolwebsite": {
+          "name": "Cool Website",
+          "title": "Access the cool website",
+          "desc": "Using the DECODE app you can enter the cool website anonymously",
+          "activation": "You have activated the DECODE App to log into cool website",
+          "login": "Login",
+          "empty": "You don't have any certificate that can be used to log in",
+          "success": "Successfully logged in",
+          "timeout": "Timeout exceeded. Please retry",
+          "refresh": "Go back to your browser and refresh the page if needed"
         }
       },
       "es": {
@@ -203,6 +217,17 @@
           "success": "Conectado correctamente",
           "timeout": "Tiempo de espera excedido. Por favor reintenta",
           "refresh": "Vuelve a tu navegador y refresca la página si es necesario"
+        },
+        "coolwebsite": {
+          "name": "Cool Website",
+          "title": "Access the cool website",
+          "desc": "Using the DECODE app you can enter the cool website anonymously",
+          "activation": "You have activated the DECODE App to log into cool website",
+          "login": "Login",
+          "empty": "You don't have any certificate that can be used to log in",
+          "success": "Successfully logged in",
+          "timeout": "Timeout exceeded. Please retry",
+          "refresh": "Go back to your browser and refresh the page if needed"
         }
       },
       "en": {
@@ -222,6 +247,17 @@
           "title": "Access the BCNNow website",
           "desc": "Using the DECODE app you can enter the BCNNow website anonymously and browse the data published there, while sharing some data to obtain personalized views",
           "activation": "You have activated the DECODE App to log into BCNNow",
+          "login": "Login",
+          "empty": "You don't have any certificate that can be used to log in",
+          "success": "Successfully logged in",
+          "timeout": "Timeout exceeded. Please retry",
+          "refresh": "Go back to your browser and refresh the page if needed"
+        },
+        "coolwebsite": {
+          "name": "Cool Website",
+          "title": "Access the cool website",
+          "desc": "Using the DECODE app you can enter the cool website anonymously",
+          "activation": "You have activated the DECODE App to log into cool website",
           "login": "Login",
           "empty": "You don't have any certificate that can be used to log in",
           "success": "Successfully logged in",

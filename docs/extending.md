@@ -115,6 +115,8 @@ Declaring the attribute is easy:
     }
 ```
 
+And we need to also add the translations (not shown).
+
 And so is declaring the new service:
 
 ```json
@@ -135,7 +137,23 @@ And so is declaring the new service:
       "actionMsg": "coolwebsite.login"
     }
 ```
+Note that we are reusing the logo image "city", but could use any other that we add to [the images folder](../src/api/atlas/images/).
 
+We also need to further declare the messages that the app will show:
+
+```json
+        "coolwebsite": {
+          "name": "Cool Website",
+          "title": "Access the cool website",
+          "desc": "Using the DECODE app you can enter the cool website anonymously",
+          "activation": "You have activated the DECODE App to log into cool website",
+          "login": "Login",
+          "empty": "You don't have any certificate that can be used to log in",
+          "success": "Successfully logged in",
+          "timeout": "Timeout exceeded. Please retry",
+          "refresh": "Go back to your browser and refresh the page if needed"
+        }
+```
 
 ##### Converter declaration
 
