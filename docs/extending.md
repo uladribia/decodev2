@@ -111,7 +111,7 @@ Declaring the attribute is easy:
       "name": "coolGender",
       "type": "enum",
       "derivedFrom": "gender",
-	  "values": ["other","declared"]
+	  "values": ["undeclared","declared"]
     }
 ```
 
@@ -173,21 +173,34 @@ export default { age, ageRange, coolGender };
 And write a simple function that takes care of the transform in the [coolGender file](../src/redux/converters/coolGender.js)
 
 ```json
-
-
+export default (gender) => {
+	var gender2 = gender;
+	if (gender == "declared") {
+	  gender2 = "defined";
+	} else if (gender == 'male'){
+		gender2 = "declared";
+	} else {
+		gender2 = "undeclared";
+	}
+  return gender2;
+};
 ```
 
 ##### API declaration
 
--> Implement single call login (client and API)
+Now we need to declare the API call for the log-in. In this case, we need not do anything, as the log-in case mirror the BCNNow already implemented logic in [login-client](../src/api/log-client.js).
+
+The set-up is fairly basic: The function basically constructs a call to the API callback suplementing the appropriate credentials and data. If we wanted to, we could alwasys write a simpler function to perform the same action.
+
+The API for the credential management is already built-in in the app, and can be checked in the [credential-client API file](../src/api/credential-issuer-client.js).
 
 ##### Business logic declaration
 
--> Reuse BCNNow + change endpoints
+We don't need to worry too much about business logic, as the log-in is already implemented in the app. Other cases might require more work (see [below](#harder-case:the-iot-service)).
 
 ##### Screen declaration
 
--> One screen
+For the screens, 
 
 ##### QR & handle trigger declaration
 

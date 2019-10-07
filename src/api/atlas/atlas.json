@@ -10,7 +10,7 @@
       "name": "coolGender",
       "type": "enum",
       "derivedFrom": "gender",
-	  "values": ["other","declared"]
+	  "values": ["nondeclared","declared"]
     },
     "birthDate": {
       "name": "birthDate",
@@ -114,6 +114,8 @@
         "female": "Dona",
         "male": "Home",
         "other": "Altre",
+		"declared": "Declared",
+		"undeclared": "Undeclared",
         "birthDate": "Data de naixement",
         "birthDateDesc": "Tria el dia, mes i any que vas néixer",
         "address": "Adreça",
@@ -131,6 +133,8 @@
         "female": "Mujer",
         "male": "Hombre",
         "other": "Otro",
+		"declared": "Declared",
+		"undeclared": "Undeclared",
         "birthDate": "Fecha de nacimiento",
         "birthDateDesc": "Escoge el día, mes y año en que naciste",
         "address": "Dirección",
@@ -147,6 +151,8 @@
         "genderDesc": "Pick your gender",
         "female": "Female",
         "male": "Male",
+		"declared": "Declared",
+		"undeclared": "Undeclared",
         "other": "Other",
         "birthDate": "Birth date",
         "birthDateDesc": "Pick the day, month and year you were born",
