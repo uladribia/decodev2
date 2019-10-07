@@ -210,13 +210,13 @@ For the screens, we head to the [applicaiton screens folder](../src/screns/appli
 
 - `index.js`: Just to declare the other files
 - `coolwebsite.Styles.js`: To declare styles (we leave them unchanged)
-- `coolwebsite.Container.js`:
-- `coolwebsite.Component.js`: 
+- `coolwebsite.Container.js`: Declaration of react-native containers (we leave them unchanged)
+- `coolwebsite.Component.js`: Declaration of calls to trigger the business logic. In this case, it's as simple as substituting the variable `BCNnow` by `coolwebsite` everywhere.
 
 
 ##### QR & handle trigger declaration
 
--> Reuse BCNNow
+Because we are using a standard log-in trigger, there is no need to change almost anything.
 
 ##### Writting test functions
 

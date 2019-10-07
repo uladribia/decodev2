@@ -29,7 +29,7 @@ import { Header, Button, CertificateList, CheckList, Message, ProgressBar } from
 import { ApplicationImage, Section, ActionSection } from 'lib/styles';
 import { getDisplayValue } from 'lib/utils';
 import { getApplication, getImage } from 'api/atlas-client';
-import { Wrapper, Subheading, Text, Bottom } from './BCNNow.Styles';
+import { Wrapper, Subheading, Text, Bottom } from './coolwebsite.Styles';
 
 const prepare = compose(
   pluck('value'),
@@ -37,7 +37,7 @@ const prepare = compose(
   filter(attr => attr.selected === true),
 );
 
-const BCNNow = ({
+const coolwebsite = ({
   navigation: { getParam, navigate },
   sharedAttributes,
   certificates,
@@ -116,16 +116,16 @@ const BCNNow = ({
   );
 };
 
-BCNNow.navigationOptions = ({ screenProps: { t } }) => ({
+coolwebsite.navigationOptions = ({ screenProps: { t } }) => ({
   headerTitle: <Header title={t('applications:bcnnow.name')} icon="th-large" />,
 });
 
-BCNNow.defaultProps = {
+coolwebsite.defaultProps = {
   error: null,
   sharedAttributes: [],
 };
 
-BCNNow.propTypes = {
+coolwebsite.propTypes = {
   sharedAttributes: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     value: PropTypes.string,
@@ -145,4 +145,4 @@ BCNNow.propTypes = {
   }).isRequired,
 };
 
-export default BCNNow;
+export default coolwebsite;
