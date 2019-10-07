@@ -227,7 +227,9 @@ Because we are using a standard log-in trigger, there is no need to change almos
 
 We need to adapt the [__tests__](../__tests__/) folder with the new code done.
 
-Changes are easy to follow (see branch changes), 
+Changes are easy to follow (see branch changes), and the extent to which you might want to tesst them is up to the coder.
+
+In our case, we should (todo) have implemented tests only on the QR-handling for "login2", the derived attribute coolGender. 
 
 #### Conclusions
 
