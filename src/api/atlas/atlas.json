@@ -90,7 +90,7 @@
     },
     "coolwebsite": {
       "urlScheme": {
-        "action": "login",
+        "action": "login2",
         "serviceId": "sessionId",
         "params": ["callback"]
       },

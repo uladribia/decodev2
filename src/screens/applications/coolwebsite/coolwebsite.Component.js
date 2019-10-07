@@ -48,11 +48,11 @@ const coolwebsite = ({
   toggleSelectedAttribute,
   progress: { step, steps },
 }) => {
-  const bcnnowUrl = getParam('callback');
+  const coolwebsiteUrl = getParam('callback');
   const sessionId = getParam('sessionId');
   const { t } = useTranslation('applications');
   const { t: attributesT } = useTranslation('attributes');
-  const { image, activationMsg, actionMsg } = getApplication('bcnnow');
+  const { image, activationMsg, actionMsg } = getApplication('coolwebsite');
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Spinner visible={loading} />
@@ -65,19 +65,19 @@ const coolwebsite = ({
             error ? (
               <Message
                 error
-                msg={error === 'timeout' ? t('bcnnow.timeout') : t('error')}
+                msg={error === 'timeout' ? t('coolwebsite.timeout') : t('error')}
                 detail={error === 'timeout' ? null : error}
               />
             ) : null
           }
           {
-            loggedIn ? <Message msg={t('bcnnow.success')} detail={t('bcnnowRefresh')} /> : null
+            loggedIn ? <Message msg={t('coolwebsite.success')} detail={t('coolwebsiteRefresh')} /> : null
           }
         </Section>
         {
           isEmpty(certificates) ? (
             <Section>
-              <Message error msg={t('bcnnow.empty')} />
+              <Message error msg={t('coolwebsite.empty')} />
             </Section>
           ) : (
             <ActionSection>
@@ -103,7 +103,7 @@ const coolwebsite = ({
               icon="sign-in"
               title={t(actionMsg)}
               onPress={() => login(
-                bcnnowUrl,
+                coolwebsiteUrl,
                 sessionId,
                 head(values(certificates)),
                 prepare(sharedAttributes),
@@ -117,7 +117,7 @@ const coolwebsite = ({
 };
 
 coolwebsite.navigationOptions = ({ screenProps: { t } }) => ({
-  headerTitle: <Header title={t('applications:bcnnow.name')} icon="th-large" />,
+  headerTitle: <Header title={t('applications:coolwebsite.name')} icon="th-large" />,
 });
 
 coolwebsite.defaultProps = {

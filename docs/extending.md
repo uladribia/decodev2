@@ -84,7 +84,9 @@ Below, we follow all the steps needed to perform a successful integration of the
 In this example, we wish to add a log-in mechanism to a simple website. The website only allows access to users posessing a certain credential (say something that proves that they are "cool"). The website does not care about data on the users that are cool, just the fact that they are. However, the webiste can also handle extra provided data.
 
 #### Existing services and UX
-In this case, our website is a simple Flask application that has a very simple API that can receive JSON-like fields with a single log-in endpoint where credentials can be submitted. If the credential is valid, then log-in is permitted.
+In this case, our website is a simple application that has a very simple API that can receive JSON-like fields with a single log-in endpoint where credentials can be submitted. If the credential is valid, then log-in is permitted.
+
+The log-in mechanism is a basic QR code or handle that conforms to [decode specs](./qr_handljng.md) and points to the relevant callback url.
 
 #### Taxonomy
 
@@ -122,7 +124,7 @@ And so is declaring the new service:
 ```json
     "coolwebsite": {
       "urlScheme": {
-        "action": "login",
+        "action": "login2",
         "serviceId": "sessionId",
         "params": ["callback"]
       },
@@ -138,6 +140,8 @@ And so is declaring the new service:
     }
 ```
 Note that we are reusing the logo image "city", but could use any other that we add to [the images folder](../src/api/atlas/images/).
+
+Note also that we are declaring an action type "login2", because "login" is already occupied (in future versions, services and actions unicity will be separated).
 
 We also need to further declare the messages that the app will show:
 
@@ -216,9 +220,11 @@ For the screens, we head to the [applicaiton screens folder](../src/screns/appli
 
 ##### QR & handle trigger declaration
 
-Because we are using a standard log-in trigger, there is no need to change almost anything.
+Because we are using a standard log-in trigger, there is no need to change almost anything. Since we defined a unique action called "login2", the code will parse the QR accordingly. We just need to make sure that our coolwebsite produces with the [correct standard](./qr_handling.md).
+
 
 ##### Writting test functions
+
 
 
 #### Conclusions
