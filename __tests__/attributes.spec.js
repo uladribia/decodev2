@@ -65,7 +65,6 @@ describe('Attribute tests', () => {
     ).toEqual('female');
   });
 
-
   test('Change attribute and getAllAttributes', () => {
     const allAttributes = getAllAttributes({
       attributes: reducer({

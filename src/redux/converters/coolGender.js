@@ -20,13 +20,9 @@
  */
 
 export default (gender) => {
-	var gender2 = gender;
-	if (gender == "declared") {
-	  gender2 = "defined";
-	} else if (gender == 'male'){
-		gender2 = "declared";
-	} else {
-		gender2 = "undeclared";
-	}
+  let gender2 = gender;
+  if (gender === 'female') gender2 = 'declared';
+  else if (gender === 'male') gender2 = 'declared';
+  else gender2 = 'undeclared';
   return gender2;
 };

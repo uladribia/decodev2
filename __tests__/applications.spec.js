@@ -64,7 +64,7 @@ describe('Application tests', () => {
           ],
         },
         bcnnow: bcnnowInitialState,
-		coolwebsite: coolwebsiteInitialState,
+        coolwebsite: coolwebsiteInitialState,
       },
     });
     expect(
@@ -117,7 +117,7 @@ describe('Application tests', () => {
           },
         },
         bcnnow: bcnnowInitialState,
-		coolwebsite: coolwebsiteInitialState,
+        coolwebsite: coolwebsiteInitialState,
       },
     });
     expect(
